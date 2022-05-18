@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main()
+{
+	int window_size,sent=0,ack,i;
+	printf("enter window size\n");
+	scanf("%d",&window_size);
+	while(1)
+	{
+		for(i=0;i<window_size;i++)
+		{
+			printf("Frame %d has been transmitted \n",sent);
+			sent++;
+			if(sent==window_size)
+			break;
+			}
+			printf("PLease enter the last ACknowledgement recieved.\n");
+			scanf("%d",&ack);
+			if(ack==window_size)
+			break;
+			else 
+			sent=ack;
+	}
+	return 0;
+}
+/*enter window size
+8
+Frame 0 has been transmitted
+Frame 1 has been transmitted
+Frame 2 has been transmitted
+Frame 3 has been transmitted
+Frame 4 has been transmitted
+Frame 5 has been transmitted
+Frame 6 has been transmitted
+Frame 7 has been transmitted
+PLease enter the last ACknowledgement recieved.
+8*/
