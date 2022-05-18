@@ -66,3 +66,8 @@ j++;
 }
 printf("\n%s",a);
 }
+/*
+Enter the string:dlestx
+DLESTXdledlestx DLEETX
+Receiver side:
+dlestx */
